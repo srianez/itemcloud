@@ -13,7 +13,7 @@ public class UsuarioController {
     @Autowired
     UsuarioService usuarioService;
 
-    @GetMapping("/usuario/{usuario}")
+    @GetMapping("/buscausuario/{usuario}")
     public Usuario buscarUsuario(@PathVariable(value = "usuario") String usuario){
         return usuarioService.buscarUsuario(usuario);
     }
