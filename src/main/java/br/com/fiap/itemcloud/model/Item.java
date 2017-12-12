@@ -9,9 +9,34 @@ public class Item {
     @Id
     private int id;
     private String nome;
+    private String tipo;
     private String descricao;
     private double valor;
-    private int quantidade;
+    private int avaliacao;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public String getDescricao() {
         return descricao;
@@ -21,28 +46,7 @@ public class Item {
         this.descricao = descricao;
     }
 
-    public int getId() {
-
-        return id;
-    }
-
-    public void setId(int id) {
-
-        this.id = id;
-    }
-
-    public String getNome() {
-
-        return nome;
-    }
-
-    public void setNome(String nome) {
-
-        this.nome = nome;
-    }
-
-    public double getValor()
-    {
+    public double getValor() {
         return valor;
     }
 
@@ -50,12 +54,12 @@ public class Item {
         this.valor = valor;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public int getAvaliacao() {
+        return avaliacao;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public void setAvaliacao(int avaliacao) {
+        this.avaliacao = avaliacao;
     }
 
 }

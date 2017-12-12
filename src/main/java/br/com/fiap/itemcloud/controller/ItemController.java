@@ -17,16 +17,25 @@ public class ItemController {
 
     @GetMapping("/nome/{nome}")
     public Item buscarItem(@PathVariable(value = "nome") String nome){
+
         return itemService.buscarItem(nome);
     }
 
     @GetMapping()
     public List<Item> buscarTodos(){
+
         return itemService.buscarTodas();
     }
 
     @PostMapping
     public void salvar(@RequestBody Item item) {
+
         itemService.salvar(item);
     }
+
+    @DeleteMapping
+    private void deleteAll() {
+        itemService.deleteAll();
+    }
+    
 }

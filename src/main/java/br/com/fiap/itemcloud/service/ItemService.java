@@ -35,4 +35,8 @@ public class ItemService {
         }
     }
 
+    public void deleteAll() {
+        itemRepository.deleteAll();
+    }
+
 }
