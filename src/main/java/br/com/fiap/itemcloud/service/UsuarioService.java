@@ -23,4 +23,8 @@ public class UsuarioService {
         return usuario;
     }
 
+    public void deleteAll() {
+        usuarioRepository.deleteAll();
+    }
+
 }

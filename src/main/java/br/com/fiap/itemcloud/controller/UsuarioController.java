@@ -23,4 +23,9 @@ public class UsuarioController {
         usuarioService.salvar(usuario);
     }
 
+    @DeleteMapping
+    private void deleteAll() {
+        usuarioService.deleteAll();
+    }
+
 }

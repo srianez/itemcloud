@@ -10,6 +10,7 @@ public class Item {
     private int id;
     private String nome;
     private String tipo;
+    private String fabricante;
     private String descricao;
     private double valor;
     private int avaliacao;
@@ -36,6 +37,14 @@ public class Item {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
     }
 
     public String getDescricao() {
