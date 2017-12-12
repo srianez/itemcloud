@@ -13,6 +13,7 @@ public class ItemService {
     @Autowired
     ItemRepository itemRepository;
 
+    //salva o item
     public void salvar(Item item) {
         Item itens = itemRepository.findByNome(item.getNome());
         if (itens != null) {
@@ -21,11 +22,13 @@ public class ItemService {
         itemRepository.save(item);
     }
 
+    //retorna todos os itens
     public List<Item> buscarTodas(){
         return itemRepository.findAll();
     }
 
-    public Item buscarItem(String nome) {
+    //busca por nome
+    public Item buscarItemNome(String nome) {
         Item itens = itemRepository.findByNome(nome);
 
         if (itens == null) {
@@ -35,8 +38,26 @@ public class ItemService {
         }
     }
 
+    //busca por id
+    public Item buscarItemId(int idItem) {
+        Item item = itemRepository.findById(idItem);
+
+        return item;
+    }
+
+    //apaga todos
     public void deleteAll() {
         itemRepository.deleteAll();
+    }
+
+    //apaga por id
+    public void deleteById(int idItem) {
+        Item item = buscarItemId(idItem);
+
+        if (item != null) {
+            itemRepository.delete(item);
+        }
+
     }
 
 }

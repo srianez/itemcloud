@@ -16,8 +16,13 @@ public class ItemController {
     ItemService itemService;
 
     @GetMapping("/nome/{nome}")
-    public Item buscarItem(@PathVariable(value = "nome") String nome){
-        return itemService.buscarItem(nome);
+    public Item buscarItemNome(@PathVariable(value = "nome") String nome){
+        return itemService.buscarItemNome(nome);
+    }
+
+    @GetMapping("/id/{id}")
+    public Item buscarItemId(@PathVariable(value = "id") int id){
+        return itemService.buscarItemId(id);
     }
 
     @GetMapping()
@@ -32,6 +37,11 @@ public class ItemController {
 
     @DeleteMapping
     private void deleteAll() {
+        itemService.deleteAll();
+    }
+
+    @DeleteMapping
+    private void deleteById() {
         itemService.deleteAll();
     }
 
