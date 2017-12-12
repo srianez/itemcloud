@@ -40,9 +40,9 @@ public class ItemController {
         itemService.deleteAll();
     }
 
-    @DeleteMapping
-    private void deleteById() {
-        itemService.deleteAll();
+    @DeleteMapping("/id/{id}")
+    private void deleteById(@PathVariable(value = "id") int id) {
+        itemService.deleteById(id);
     }
 
 }
