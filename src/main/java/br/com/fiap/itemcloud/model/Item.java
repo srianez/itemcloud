@@ -12,7 +12,10 @@ public class Item {
     private String tipo;
     private String fabricante;
     private String descricao;
-    private double valor;
+    private String valor;
+
+
+
     private int avaliacao;
 
     public int getId() {
@@ -55,20 +58,20 @@ public class Item {
         this.descricao = descricao;
     }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
     public int getAvaliacao() {
         return avaliacao;
     }
 
     public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
     }
 
 }
