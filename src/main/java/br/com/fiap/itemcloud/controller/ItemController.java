@@ -21,7 +21,8 @@ public class ItemController {
     }
 
     @GetMapping("/id/{id}")
-    public Item buscarItemId(@PathVariable(value = "id") int id){
+    public Item buscarItemId(@PathVariable(value = "id") String id)
+    {
         return itemService.buscarItemId(id);
     }
 
