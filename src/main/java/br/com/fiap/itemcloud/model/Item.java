@@ -13,8 +13,6 @@ public class Item {
     private String fabricante;
     private String descricao;
     private String valor;
-
-
     private int avaliacao;
 
     public String getId() {

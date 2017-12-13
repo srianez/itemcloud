@@ -9,6 +9,6 @@ public interface ItemRepository  extends MongoRepository<Item, String>{
 
     Item findByNome(String nome);
 
-    Item findById(int id);
+    Item findById(String id);
 
 }

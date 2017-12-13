@@ -39,7 +39,7 @@ public class ItemService {
     }
 
     //busca por id
-    public Item buscarItemId(int idItem) {
+    public Item buscarItemId(String idItem) {
         Item item = itemRepository.findById(idItem);
 
         return item;
@@ -51,7 +51,7 @@ public class ItemService {
     }
 
     //apaga por id
-    public void deleteById(int idItem) {
+    public void deleteById(String idItem) {
         Item item = buscarItemId(idItem);
 
         if (item != null) {
