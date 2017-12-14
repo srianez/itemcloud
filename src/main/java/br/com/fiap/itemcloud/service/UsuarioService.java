@@ -23,6 +23,11 @@ public class UsuarioService {
         return usuario;
     }
 
+    public Usuario buscarUsuario(String user, String senha) {
+        Usuario usuario = usuarioRepository.findByUsuarioAndSenha(user, senha);
+        return usuario;
+    }
+
     public void deleteAll() {
         usuarioRepository.deleteAll();
     }

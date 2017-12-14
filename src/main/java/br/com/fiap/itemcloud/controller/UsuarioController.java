@@ -18,6 +18,12 @@ public class UsuarioController {
         return usuarioService.buscarUsuario(usuario);
     }
 
+    @GetMapping("/buscausuario/{usuario}/{senha}")
+    public Usuario buscarUsuario(@PathVariable(value = "usuario") String usuario,
+                                 @PathVariable(value = "senha") String senha){
+        return usuarioService.buscarUsuario(usuario, senha);
+    }
+
     @PostMapping
     public void salvar(@RequestBody Usuario usuario) {
         usuarioService.salvar(usuario);
