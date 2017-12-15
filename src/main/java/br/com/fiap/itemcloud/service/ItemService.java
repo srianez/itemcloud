@@ -38,6 +38,17 @@ public class ItemService {
         }
     }
 
+    //busca por conteúdo
+    public Item findByNomeContaining(String nome) {
+        Item itens = itemRepository.findByNomeContaining(nome);
+        if (itens == null) {
+            return new Item();
+        } else {
+            return itens;
+        }
+    }
+
+
     //busca por id
     public Item buscarItemId(String idItem) {
         Item item = itemRepository.findById(idItem);

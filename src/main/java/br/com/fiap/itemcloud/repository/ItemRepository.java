@@ -11,4 +11,6 @@ public interface ItemRepository  extends MongoRepository<Item, String>{
 
     Item findById(String id);
 
+    Item findByNomeContaining(String nome);
+
 }

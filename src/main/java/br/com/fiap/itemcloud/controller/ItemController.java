@@ -20,6 +20,11 @@ public class ItemController {
         return itemService.buscarItemNome(nome);
     }
 
+    @GetMapping("/nomeParcial/{nome}")
+    public Item findByNomeContaining(@PathVariable(value = "nome") String nome){
+        return itemService.findByNomeContaining(nome);
+    }
+
     @GetMapping("/id/{id}")
     public Item buscarItemId(@PathVariable(value = "id") String id)
     {
