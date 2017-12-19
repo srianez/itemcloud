@@ -4,6 +4,8 @@ import br.com.fiap.itemcloud.model.Item;
 import br.com.fiap.itemcloud.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -19,6 +21,10 @@ public class ItemService {
         if (itens != null) {
             item.setId(itens.getId());
         }
+        itemRepository.save(item);
+    }
+
+    public void atualizar(@RequestBody Item item) {
         itemRepository.save(item);
     }
 

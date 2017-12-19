@@ -41,6 +41,11 @@ public class ItemController {
         itemService.salvar(item);
     }
 
+    @PutMapping
+    public void atualizar(@RequestBody Item item) {
+        itemService.atualizar(item);
+    }
+
     @DeleteMapping
     private void deleteAll() {
         itemService.deleteAll();
