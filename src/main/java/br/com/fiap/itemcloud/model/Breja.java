@@ -12,8 +12,7 @@ public class Breja {
     private String tipo;
     private String fabricante;
     private String descricao;
-    private String valor;
-    private int avaliacao;
+    private float avaliacao;
 
     public String getId() {
         return id;
@@ -55,20 +54,13 @@ public class Breja {
         this.descricao = descricao;
     }
 
-    public int getAvaliacao() {
+    public float getAvaliacao() {
         return avaliacao;
     }
 
-    public void setAvaliacao(int avaliacao) {
+    public void setAvaliacao(float avaliacao) {
         this.avaliacao = avaliacao;
     }
 
-    public String getValor() {
-        return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
 
 }
