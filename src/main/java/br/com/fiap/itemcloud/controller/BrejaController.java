@@ -21,7 +21,7 @@ public class BrejaController {
     }
 
     @GetMapping("/nomeParcial/{nome}")
-    public Breja findByNomeContaining(@PathVariable(value = "nome") String nome){
+    public List<Breja> findByNomeContaining(@PathVariable(value = "nome") String nome){
         return brejaService.findByNomeContaining(nome);
     }
 

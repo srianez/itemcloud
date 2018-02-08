@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -44,10 +45,11 @@ public class BrejaService {
     }
 
     //busca por conteúdo
-    public Breja findByNomeContaining(String nome) {
-        Breja brejas = brejaRepository.findByNomeContaining(nome);
+    public List<Breja> findByNomeContaining(String nome) {
+        List<Breja> brejas = brejaRepository.findByNomeContaining(nome);
+
         if (brejas == null) {
-            return new Breja();
+            return new ArrayList<>();
         } else {
             return brejas;
         }
